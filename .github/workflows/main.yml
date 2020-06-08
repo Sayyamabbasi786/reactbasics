@@ -14,17 +14,13 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x]
-
     steps:
     - uses: actions/checkout@v2
       
     - name: setting up node js environment
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2-beta
       with:
-        node-version: ${{ matrix.node-version }}
+        version: 12
         
     - name: Github Actions for yarn
       uses: Borales/actions-yarn@v2.1.0
