@@ -39,9 +39,3 @@ jobs:
     
     - name: deploying on surge
       run: surge ./build http://bootcamp2020_sayyam.surge.sh/ --token ${{secrets_SURGE_TOKEN}}
-      
-     
-     
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
