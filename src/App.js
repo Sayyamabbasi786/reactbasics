@@ -1,11 +1,26 @@
 import React from 'react';
 import './App.css';
+import { Header } from './component/Header';
+import { Balance } from './component/Balance';
+import { AccountSummary } from './component/AccountSummary';
+import { AddTransaction } from './component/AddTransaction';
+import { TransactionHistory } from './component/TransactionHistory';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello from sayyam abbasi</h1>
-    </div>
+
+    <GlobalProvider>
+      <div className="container">
+        <Header />
+        <Balance />
+        <AccountSummary />
+        <TransactionHistory />
+        <AddTransaction />
+      </div>
+    </GlobalProvider>
+
+
   );
 }
 
